@@ -1,0 +1,30 @@
+Options +Indexes
+
+IndexOptions FancyIndexing
+IndexOptions FoldersFirst IgnoreCase XHTML NameWidth=*
+IndexOptions SuppressHTMLPreamble SuppressRules HTMLTable
+IndexOptions IconHeight=16 IconWidth=16
+IndexOptions SuppressDescription
+
+HeaderName /.index/main.php
+
+DefaultIcon /.index/icons/text.png
+
+AddIcon /.index/icons/blank.gif        ^^BLANKICON^^
+AddIcon /.index/icons/dir.png          ^^DIRECTORY^^
+AddIcon /.index/icons/back.png         ..
+AddIcon /.index/icons/comp.png         .comp
+AddIcon /.index/icons/compressed.gif   .zip .tar .tgz .rar
+AddIcon /.index/icons/doc.png          .doc
+AddIcon /.index/icons/image.png        .jpg .png .gif .tif .tiff
+AddIcon /.index/icons/java.png         .java
+AddIcon /.index/icons/js.png           .js
+AddIcon /.index/icons/movie-ms.gif     .wmv .avi
+AddIcon /.index/icons/mov.png          .mov .qt
+AddIcon /.index/icons/pdf.png          .pdf
+AddIcon /.index/icons/php.png          .php
+AddIcon /.index/icons/ppt.png          .ppt
+AddIcon /.index/icons/ps.png           .ps
+AddIcon /.index/icons/sound.png        .mp3 .wav .m4a
+AddIcon /.index/icons/text.png         .txt .text .html .htm
+AddIcon /.index/icons/xls.png          .xls

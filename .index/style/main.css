@@ -1,0 +1,228 @@
+/*
+  Indices styles: javascript version
+    This does its magic based on a bunch of Javascript that cruises
+    the DOM of Apache's HTML output and injects useful class names
+    throughout.
+
+  Indices: http://antisleep.com/software/.index
+*/
+
+/*==========================================================================*/
+
+body {
+    font-family: helvetica, arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    font-size: 11px;
+    overflow-x: hidden;
+}
+
+a {
+    text-decoration:none;
+    color: black;
+}
+
+img {
+    border: 0;
+}
+
+.tab-content {
+    box-sizing: border-box;
+    display: none;
+    width: 90%;
+}
+
+
+/* General STYLING ==========================================================*/
+
+.tab-content {
+    padding-top: 30px;
+}
+
+p.note {
+    color: #999;
+    font-size: 13px;
+    font-style: italic;
+}
+
+
+/* TABLE STYLING ============================================================*/
+
+tr, td, th {
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+table, tbody, tr {
+    width: 100%;
+}
+
+table.directory {
+    background-color: white;
+    border-collapse: collapse;
+    margin-left: 75px;
+    padding: 0px;
+    width: 90%;
+}
+
+table.directory th {
+    display: none;
+}
+
+table.directory td,
+table.directory td a {
+    font: 100 20px/1.5 Helvetica, Arial, sans-serif;
+    padding: 10px;
+}
+
+table.directory td.filesize,
+table.directory td.last_modified {
+    color: #999;
+    font: 100 17px/1.5 Helvetica, Arial, sans-serif;
+    text-align: right;
+}
+
+table.directory td a {
+    display: inline-block;
+    height: 100%;
+    margin: 0;
+    margin-right: 20px;
+    padding: 0;
+}
+
+table.directory td.icon a {
+    color: #666;
+    font-size: 16px;
+    margin-right: 0;
+}
+
+table.directory td a.code-editor {
+    color: #666;
+    font-size: 15px;
+}
+
+
+/* Options ============================================================*/
+
+nav.options {
+    background: #222;
+    color: #fff;
+    left: 0;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    width: 60px;
+
+    -moz-box-shadow:    inset 0 0 15px #000000;
+    -webkit-box-shadow: inset 0 0 15px #000000;
+    box-shadow:         inset 0 0 15px #000000;
+}
+
+nav.options a {
+    color: #fff;
+    display: block;
+    font-size: 20px;
+    opacity: 0.6;
+    padding: 15px 0;
+    text-align: center;
+    width: 100%;
+}
+
+nav.options a.active,
+nav.options a:hover {
+    background: #333;
+    opacity: 1.0;
+}
+
+body.tab-code nav.options .code,
+body.tab-search nav.options .search,
+body.tab-directory nav.options .directory,
+nav.options a.active {
+    background: #333 url('/.index/images/arrow.png') right center no-repeat;
+    opacity: 1.0;
+}
+
+
+
+/* Side Bar ============================================================*/
+
+.search.tab-content {
+    margin-left: 75px;
+}
+
+.search hr {
+    background: transparent;
+    border: 0;
+    border-top: 1px solid #999;
+    height: 1px;
+    margin: 30px 30px 30px 0;
+}
+
+.search input {
+    font: 16px/1.5 Helvetica, Arial;
+    padding: 5px 10px;
+    width: 400px;
+    box-sizing: border-box;
+    height: 30px;
+}
+
+.search button {
+    line-height: 1.5;
+    padding: 5px 15px;
+    box-sizing: border-box;
+    height: 30px;
+}
+
+.search h2 {
+    color: #f1f1f1;
+    font: 60px/1 Helvetica, Arial;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+}
+
+.search .search-results,
+.search .search-results li {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    z-index: 10;
+}
+
+.search .search-results li {
+    color: #222;
+    font: 16px/1.5 Helvetica, Arial;
+    list-style: decimal-leading-zero;
+    padding: 15px 0;
+    margin-left: 35px;
+}
+
+
+
+/* Code ============================================================*/
+
+.code.tab-content {
+    height: 100%;
+    margin-left: 75px;
+    width: 100%;
+}
+
+.code.tab-content iframe {
+    border: 0;
+    display: block;
+    height: 100%;
+    width: 100%;
+}
+
+
+/* Active States ====================================================*/
+
+body.tab-code #tab-code,
+body.tab-search #tab-search,
+body.tab-directory #tab-directory {
+    display: block;
+}
+
+
