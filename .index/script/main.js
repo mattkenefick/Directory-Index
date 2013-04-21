@@ -169,10 +169,17 @@ var DirectoryIndex = new(function() {
                     .append(
                         $(document.createElement('a'))
                             .attr({
-                                "class": "code-editor",
                                 "href": item
                             })
                             .html(item)
+                        )
+                    .append(
+                        $(document.createElement('a'))
+                            .attr({
+                                "class": "code-editor",
+                                "href": item
+                            })
+                            .html('<span class="icon-newspaper"></span>')
                         )
                     .appendTo($el);
             });
